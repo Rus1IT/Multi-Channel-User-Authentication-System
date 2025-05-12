@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  message-service:
+    image: message-service:latest
+    build:
+      context: .
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
